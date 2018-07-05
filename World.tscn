@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://TileMap.gd" type="Script" id=2]
+[ext_resource path="res://BuildingTileset.tres" type="TileSet" id=3]
+
+[node name="World" type="Node" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 28, 14 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -327675, 0, 0, -327674, 0, 0, -262140, 0, 0, -262137, 0, 0, -196605, 0, 0, -196604, 0, 0, -196601, 0, 0, -196600, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -65535, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65526, 0, 0, 1, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 10, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 131075, 0, 0, 131076, 0, 0, 131079, 0, 0, 131080, 0, 0, 196612, 0, 0, 196615, 0, 0, 262149, 0, 0, 262150, 0, 0 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Buildings" type="TileMap" parent="TileMap" index="0"]
+
+position = Vector2( 0, -30 )
+mode = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 28, 14 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+
