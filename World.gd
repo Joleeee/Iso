@@ -6,13 +6,12 @@ extends Node
 var wood = 0
 var stone = 0
 
-var timer = 10
+var timer = 0
 onready var logLabel = find_node("logLabel")
+onready var plusOneScene = preload("res://PlusOne.tscn")
 
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
 	pass
 
 func _process(delta):
@@ -24,4 +23,17 @@ func _process(delta):
 	pass
 
 func collectResources():
-	wood += $TileMap/Buildings.get_used_cells_by_id($TileMap.TILE_TREE).size()
+	var cells = $TileMap/Buildings.get_used_cells_by_id($TileMap.TILE_TREE)
+	wood += cells.size()
+	for cell in cells.size():
+		var vector = Vector2(cells[cell].x, cells[cell].y)
+		vector = $TileMap/Buildings.map_to_world(vector)
+		plusOne(vector)
+
+func plusOne(position):
+	position.x -= 16
+	position.y -= 5
+	var instance = plusOneScene.instance()
+	instance.rect_position = position
+	add_child(instance)
+	pass

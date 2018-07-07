@@ -25,8 +25,11 @@ func place(event):
 		if get_cellv(tilePosition) != -1 && lastTileId != id:
 			if id == -1:
 				pass
-			elif id == TILE_TREE && world.wood >= 4:
-				world.wood -= 4
+			elif lastTileId == -1:
+				if id == TILE_BUILDING && world.wood >= 20:
+					world.wood -= 20
+				elif id == TILE_TREE && world.wood >= 4:
+					world.wood -= 4
 			else:
 				return
 			$Buildings.set_cellv(tilePosition, id)
