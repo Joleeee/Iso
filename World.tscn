@@ -52,7 +52,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray(  )
+tile_data = PoolIntArray( 196623, 0, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="1"]
